@@ -1,0 +1,59 @@
+:root {
+    --font-size: 18px;
+}
+
+form:invalid>#update {
+    pointer-events: none;
+    background-color:grey;
+}
+
+.pagination{
+    text-align: center;
+}
+
+.pagination .page{
+    --background-color: transparent;
+    --color: var(--primary);
+    --border-color: var(--primary);
+    padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.pagination a:hover{
+    --color: var(--contrast-hover);
+    --background-color: transparent;
+    --border-color: var(--contrast-hover);
+}
+
+.active{
+    --background-color: var(--contrast-hover)!important;
+    --border-color: var(--contrast-hover)!important;
+    --color: var(--contrast-inverse)!important;
+}
+
+td >a{
+    --color: var(--contrast-hover);
+    --background-color: transparent;
+    --border-color: var(--contrast-hover);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    text-decoration: none;
+}
+
+td >a:hover{
+    --background-color: var(--contrast);
+    --border-color: var(--contrast);
+    --color: var(--contrast-inverse);
+}
+
+@media (max-width: 1200px){
+    .actions{
+        display: grid;text-align: center;
+    }
+    .pagination .page{
+        font-size: .5rem;
+        padding: 1.5vw;
+    }
+}
